@@ -365,9 +365,7 @@ function Generator() {
               />
             </div>
             <div>
-              <Label className="mb-2 block text-xs text-muted-foreground">
-                Error correction
-              </Label>
+              <Label className="mb-2 block text-xs text-muted-foreground">Error correction</Label>
               <Select value={ecc} onValueChange={(v) => setEcc(v as typeof ecc)}>
                 <SelectTrigger aria-label="Error correction level" className="bg-background/40">
                   <SelectValue />
@@ -382,9 +380,7 @@ function Generator() {
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <Label className="mb-2 block text-xs text-muted-foreground">
-                  Foreground
-                </Label>
+                <Label className="mb-2 block text-xs text-muted-foreground">Foreground</Label>
                 <input
                   type="color"
                   aria-label="QR foreground color"
@@ -394,9 +390,7 @@ function Generator() {
                 />
               </div>
               <div>
-                <Label className="mb-2 block text-xs text-muted-foreground">
-                  Background
-                </Label>
+                <Label className="mb-2 block text-xs text-muted-foreground">Background</Label>
                 <input
                   type="color"
                   aria-label="QR background color"
@@ -560,9 +554,9 @@ function Scanner() {
     const steps = 8;
     for (let i = 1; i <= steps; i++) {
       const v = start + (1 - start) * (i / steps);
-      // eslint-disable-next-line no-await-in-loop
+
       await applyZoom(v);
-      // eslint-disable-next-line no-await-in-loop
+
       await new Promise((r) => setTimeout(r, 30));
     }
   }, [applyZoom]);
@@ -742,10 +736,7 @@ function Scanner() {
             id={readerId}
             className="h-full w-full [&_video]:h-full [&_video]:w-full [&_video]:object-cover"
           />
-          <canvas
-            ref={overlayRef}
-            className="pointer-events-none absolute inset-0 h-full w-full"
-          />
+          <canvas ref={overlayRef} className="pointer-events-none absolute inset-0 h-full w-full" />
           {zoomSupported && currentZoom > 1.05 && (
             <div className="absolute right-2 top-2 rounded-full bg-black/60 px-2.5 py-1 text-xs font-medium text-white backdrop-blur">
               {currentZoom.toFixed(1)}× zoom
@@ -824,12 +815,7 @@ function Scanner() {
             <img src={qrDataUrl} alt="Re-rendered scanned QR" className="mx-auto h-40 w-40" />
           </div>
         )}
-        <Button
-          onClick={download}
-          disabled={!qrDataUrl}
-          size="lg"
-          className="w-full font-semibold"
-        >
+        <Button onClick={download} disabled={!qrDataUrl} size="lg" className="w-full font-semibold">
           <Download className="mr-2 h-4 w-4" />
           Download QR Image
         </Button>
