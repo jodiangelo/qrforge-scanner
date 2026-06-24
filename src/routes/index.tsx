@@ -1,7 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { ClientOnly, createFileRoute } from "@tanstack/react-router";
 import { useState, useRef, useCallback, useEffect } from "react";
 import QRCode from "qrcode";
-import { Html5Qrcode } from "html5-qrcode";
+import type { Html5Qrcode } from "html5-qrcode";
 import {
   QrCode,
   ScanLine,
@@ -50,6 +50,13 @@ const FORMATS: { value: Format; label: string; icon: typeof Type }[] = [
   { value: "phone", label: "Phone", icon: Phone },
   { value: "vcard", label: "vCard", icon: User },
 ];
+
+let html5QrcodeModule: Promise<typeof import("html5-qrcode")> | null = null;
+
+function loadHtml5Qrcode() {
+  html5QrcodeModule ??= import("html5-qrcode");
+  return html5QrcodeModule;
+}
 
 function escapeWifi(s: string) {
   return s.replace(/([\\;,":])/g, "\\$1");
@@ -612,6 +619,7 @@ function Scanner() {
   const startCamera = useCallback(
     async (cameraId?: string) => {
       try {
+        const { Html5Qrcode } = await loadHtml5Qrcode();
         const devices = cameras.length
           ? cameras
           : (await Html5Qrcode.getCameras()).map((c) => ({ id: c.id, label: c.label }));
@@ -858,7 +866,15 @@ function Index() {
               <Generator />
             </TabsContent>
             <TabsContent value="scan">
-              <Scanner />
+              <ClientOnly
+                fallback={
+                  <div className="flex min-h-80 items-center justify-center text-sm text-muted-foreground">
+                    Loading scanner...
+                  </div>
+                }
+              >
+                <Scanner />
+              </ClientOnly>
             </TabsContent>
           </Tabs>
         </Card>

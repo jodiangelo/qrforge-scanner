@@ -78,45 +78,29 @@ const createLucideIcon = (iconName, iconNode) => {
   Component.displayName = toPascalCase(iconName);
   return Component;
 };
-const __iconNode$f = [
-  [
-    "path",
-    {
-      d: "M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z",
-      key: "18u6gg"
-    }
-  ],
-  ["circle", { cx: "12", cy: "13", r: "3", key: "1vg3eu" }]
-];
-const Camera = createLucideIcon("camera", __iconNode$f);
-const __iconNode$e = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$e);
-const __iconNode$d = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
-const ChevronDown = createLucideIcon("chevron-down", __iconNode$d);
-const __iconNode$c = [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]];
-const ChevronUp = createLucideIcon("chevron-up", __iconNode$c);
-const __iconNode$b = [
-  ["rect", { width: "14", height: "14", x: "8", y: "8", rx: "2", ry: "2", key: "17jyea" }],
-  ["path", { d: "M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2", key: "zix9uf" }]
-];
-const Copy = createLucideIcon("copy", __iconNode$b);
-const __iconNode$a = [
+const __iconNode$c = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$c);
+const __iconNode$b = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
+const ChevronDown = createLucideIcon("chevron-down", __iconNode$b);
+const __iconNode$a = [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]];
+const ChevronUp = createLucideIcon("chevron-up", __iconNode$a);
+const __iconNode$9 = [
   ["path", { d: "M12 15V3", key: "m9g1x1" }],
   ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }],
   ["path", { d: "m7 10 5 5 5-5", key: "brsn70" }]
 ];
-const Download = createLucideIcon("download", __iconNode$a);
-const __iconNode$9 = [
+const Download = createLucideIcon("download", __iconNode$9);
+const __iconNode$8 = [
   ["path", { d: "M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71", key: "1cjeqo" }],
   ["path", { d: "M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71", key: "19qd67" }]
 ];
-const Link = createLucideIcon("link", __iconNode$9);
-const __iconNode$8 = [
+const Link = createLucideIcon("link", __iconNode$8);
+const __iconNode$7 = [
   ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7", key: "132q7q" }],
   ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2", key: "izxlao" }]
 ];
-const Mail = createLucideIcon("mail", __iconNode$8);
-const __iconNode$7 = [
+const Mail = createLucideIcon("mail", __iconNode$7);
+const __iconNode$6 = [
   [
     "path",
     {
@@ -125,8 +109,8 @@ const __iconNode$7 = [
     }
   ]
 ];
-const MessageSquare = createLucideIcon("message-square", __iconNode$7);
-const __iconNode$6 = [
+const MessageSquare = createLucideIcon("message-square", __iconNode$6);
+const __iconNode$5 = [
   [
     "path",
     {
@@ -135,8 +119,8 @@ const __iconNode$6 = [
     }
   ]
 ];
-const Phone = createLucideIcon("phone", __iconNode$6);
-const __iconNode$5 = [
+const Phone = createLucideIcon("phone", __iconNode$5);
+const __iconNode$4 = [
   ["rect", { width: "5", height: "5", x: "3", y: "3", rx: "1", key: "1tu5fj" }],
   ["rect", { width: "5", height: "5", x: "16", y: "3", rx: "1", key: "1v8r4q" }],
   ["rect", { width: "5", height: "5", x: "3", y: "16", rx: "1", key: "1x03jg" }],
@@ -150,12 +134,7 @@ const __iconNode$5 = [
   ["path", { d: "M21 12v.01", key: "1lwtk9" }],
   ["path", { d: "M12 21v-1", key: "1880an" }]
 ];
-const QrCode = createLucideIcon("qr-code", __iconNode$5);
-const __iconNode$4 = [
-  ["path", { d: "M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8", key: "1357e3" }],
-  ["path", { d: "M3 3v5h5", key: "1xhq8a" }]
-];
-const RotateCcw = createLucideIcon("rotate-ccw", __iconNode$4);
+const QrCode = createLucideIcon("qr-code", __iconNode$4);
 const __iconNode$3 = [
   ["path", { d: "M3 7V5a2 2 0 0 1 2-2h2", key: "aa7l1z" }],
   ["path", { d: "M17 3h2a2 2 0 0 1 2 2v2", key: "4qcy5o" }],
@@ -183,20 +162,17 @@ const __iconNode = [
 ];
 const Wifi = createLucideIcon("wifi", __iconNode);
 export {
-  Camera as C,
+  ChevronDown as C,
   Download as D,
   Link as L,
   Mail as M,
   Phone as P,
   QrCode as Q,
-  RotateCcw as R,
   ScanLine as S,
   Type as T,
   User as U,
   Wifi as W,
   MessageSquare as a,
   Check as b,
-  Copy as c,
-  ChevronDown as d,
-  ChevronUp as e
+  ChevronUp as c
 };
