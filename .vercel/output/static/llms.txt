@@ -1,9 +1,0 @@
-# QR Forge
-
-> Free, private QR code generator and scanner that runs entirely in your browser. Create QR codes for URLs, text, WiFi, vCard, email, SMS, and phone numbers, or scan codes with your camera.
-
-QR Forge is a single-page web tool. No sign-up, no tracking, no uploads — generation and scanning happen locally on your device. Generated QR codes are downloadable as PNG images with customizable size, margin, error correction, and colors. The scanner uses the device camera with live bounding-box overlay and hardware auto-zoom on supported browsers.
-
-## Pages
-
-- [QR Forge](/): Generate and scan QR codes (URL, text, WiFi, vCard, email, SMS, phone).
