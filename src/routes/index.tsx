@@ -101,13 +101,14 @@ function Generator() {
         return `WIFI:T:${wifi.encryption};S:${escapeWifi(wifi.ssid)};${
           wifi.encryption !== "nopass" ? `P:${escapeWifi(wifi.password)};` : ""
         }${wifi.hidden ? "H:true;" : ""};`;
-      case "email":
+      case "email": {
         if (!email.to) return "";
         const params = new URLSearchParams();
         if (email.subject) params.set("subject", email.subject);
         if (email.body) params.set("body", email.body);
         const qs = params.toString();
         return `mailto:${email.to}${qs ? `?${qs}` : ""}`;
+      }
       case "sms":
         if (!sms.number) return "";
         return `SMSTO:${sms.number}:${sms.message}`;

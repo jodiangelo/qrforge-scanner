@@ -1,6 +1,4 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
+import { Link, Outlet, createRootRoute } from "@tanstack/react-router";
 
 function NotFoundComponent() {
   return (
@@ -25,68 +23,9 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "QR Forge — Generate & Scan QR Codes" },
-      {
-        name: "description",
-        content:
-          "Generate QR codes from text or links and scan existing QR codes. Free, fast, dark-mode QR tool.",
-      },
-      { name: "author", content: "QR Forge" },
-      { property: "og:title", content: "QR Forge — Generate & Scan QR Codes" },
-      {
-        property: "og:description",
-        content:
-          "Generate QR codes from text or links and scan existing QR codes. Free, fast, dark-mode QR tool.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "QR Forge — Generate & Scan QR Codes" },
-      {
-        name: "twitter:description",
-        content:
-          "Generate QR codes from text or links and scan existing QR codes. Free, fast, dark-mode QR tool.",
-      },
-      {
-        property: "og:image",
-        content:
-          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/e6a82191-0bb4-4d84-8463-209909971d2e",
-      },
-      {
-        name: "twitter:image",
-        content:
-          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/e6a82191-0bb4-4d84-8463-209909971d2e",
-      },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en" className="dark">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   return <Outlet />;
